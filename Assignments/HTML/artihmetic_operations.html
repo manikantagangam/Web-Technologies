@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E21CSEU0947_Lab5</title>
+    <style>
+        .outbox{
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            padding-bottom: 50px;
+        }
+        .inbox{
+            width: 50%;
+            height: 50%;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="outbox">
+        <center><h1>Arithmetic Operations</h1></center>
+        <center>
+        <div class="inbox">
+
+            <input type="number">
+            +
+            <input type="number">
+            <button onclick="add()">SUM</button>
+            <p id="sum">Result</p>
+
+            <hr>
+            
+            <input type="number">
+            -
+            <input type="number">
+            <button onclick="sub()">SUB</button>
+            <p id="sub">Result</p>
+
+            <hr>
+
+            <input type="number">
+            *
+            <input type="number">
+            <button onclick="mul()">MUL</button>
+            <p id="mul">Result</p>
+
+            <hr>
+
+            <input type="number">
+            /
+            <input type="number">
+            <button onclick="div()">DIV</button>
+            <p id="div">Result</p>
+
+            <hr>
+            
+        </div>
+        </center>
+    </div>
+    <script>
+        function add(){
+            var a = document.getElementsByTagName("input")[0].value;
+            var b = document.getElementsByTagName("input")[1].value;
+            var c = parseInt(a) + parseInt(b);
+            document.getElementById("sum").innerHTML = "Sum of "+ a+ " and "+b +" is " +c;
+        }
+        function sub(){
+            var a = document.getElementsByTagName("input")[2].value;
+            var b = document.getElementsByTagName("input")[3].value;
+            var c = parseInt(a) - parseInt(b);
+            document.getElementById("sub").innerHTML = "Difference of "+a+" and "+b+" is "+c;
+        }
+        function mul(){
+            var a = document.getElementsByTagName("input")[4].value;
+            var b = document.getElementsByTagName("input")[5].value;
+            var c = parseInt(a) * parseInt(b);
+            document.getElementById("mul").innerHTML = "Product of "+a+" and "+b+" is "+c;
+        }
+        function div(){
+            var a = document.getElementsByTagName("input")[6].value;
+            var b = document.getElementsByTagName("input")[7].value;
+            var c = parseInt(a) / parseInt(b);
+            document.getElementById("div").innerHTML = "Division of "+a+" and "+b+" is "+c;
+        }
+    </script>
+</body>
+</html>
